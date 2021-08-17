@@ -19,6 +19,7 @@
   "homepage": "https://github.com/SIN88/week12latehomework#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "util": "^0.12.4"
   }
 }
