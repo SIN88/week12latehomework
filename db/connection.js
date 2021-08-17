@@ -49,7 +49,7 @@ connection.connect((err) => {
   }
   
   function viewAllEmployees(){
-      connection.query('select * from employees', (err, data)=>{
+      connection.query('select * from employee', (err, data)=>{
           if(err) throw err
           console.table(data)
           startPrompt()
@@ -57,7 +57,7 @@ connection.connect((err) => {
   }
   
   function viewDepartments(){
-      connection.query('select * from Departments', (err, data)=>{
+      connection.query('select * from department', (err, data)=>{
           if(err) throw err
           console.table(data)
           startPrompt()
@@ -66,7 +66,7 @@ connection.connect((err) => {
   }
   
   function viewRoles(){
-      connection.query('select * from Roles', (err, data)=>{
+      connection.query('select * from role', (err, data)=>{
           if(err) throw err
           console.table(data)
           startPrompt()
@@ -109,7 +109,7 @@ connection.connect((err) => {
               message: "What is your role with the company?"
           }         
       ]).then(results =>{
-          connection.query('INSERT INTO employees set ?', results,  (err, data)=>{
+          connection.query('INSERT INTO employee set ?', results,  (err, data)=>{
               if(err) throw err
               console.table(data)
               startPrompt()
@@ -140,7 +140,7 @@ connection.connect((err) => {
   
   
       ]).then(results =>{
-          connection.query('INSERT INTO roles set ?', results,  (err, data)=>{
+          connection.query('INSERT INTO role set ?', results,  (err, data)=>{
               if(err) throw err
               console.table(data)
               startPrompt()
