@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   user: "root",
   password: "Persephone1",
   database: "employees",
-  table:"employee"
+ 
 });
 
 connection.connect((err) => {
@@ -81,7 +81,7 @@ connection.connect((err) => {
               message: "What is the departments name?"
           }   
       ]).then(results =>{
-          connection.query('INSERT INTO departments set ?', results,  (err, data)=>{
+          connection.query('INSERT INTO department set ?', results,  (err, data)=>{
               if(err) throw err
               console.table(data)
               startPrompt()
@@ -167,7 +167,7 @@ connection.connect((err) => {
         
       ]).then(results => {
           console.log(results)
-          connection.query('UPDATE employees SET role_id = ? WHERE id = ?', [results.role_id, results.employee_id], (err,data)=> {
+          connection.query('UPDATE employee SET role_id = ? WHERE id = ?', [results.role_id, results.employee_id], (err,data)=> {
               if(err) throw err
               console.table(data)
               startPrompt()
