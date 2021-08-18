@@ -7,6 +7,7 @@ const connection = mysql.createConnection({
   user: "root",
   password: "Persephone1",
   database: "employees",
+  table:"employee"
  
 });
 
@@ -40,7 +41,7 @@ connection.connect((err) => {
           }else if(results.option === "Add roles"){
               addRoles()
           }else if(results.option === "Update employee roles"){
-              updateEmployee()
+              updateEmployees()
           }else {
               console.log("Something went wrong", results)
               process.exit()
