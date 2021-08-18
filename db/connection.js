@@ -151,7 +151,7 @@ connection.connect((err) => {
   }
   
   
-  function updateEmployee() {
+  function updateEmployees() {
       inquirer.prompt([
           {
               type:"input",
